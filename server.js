@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Poslužuje sadržaj iz public mape
+// Poslužuje statičke datoteke (HTML, CSS, slike) iz mape 'public'
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send("Pozdrav sa Railway servera!");
+    res.sendFile(__dirname + '/public/index.html'); // Poslužuje početnu stranicu
 });
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server pokrenut na portu ${PORT}`);
+    console.log(`Server pokrenut na portu ${PORT}`);
 });
