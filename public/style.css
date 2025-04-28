@@ -1,3 +1,4 @@
+/* Opći stilovi za tijelo stranice */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -29,8 +30,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:20px;
-
+    gap: 20px;
 }
 
 .nav-menu a {
@@ -43,14 +43,63 @@ nav {
 }
 
 .nav-menu a:hover {
-    background-color: #555;  
+    background-color: #555;
 }
 
+/* Stil za filter kontejnere */
+#filter-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+/* Opći stilovi za inpute i selekte u filtrima */
+#filter-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#filter-container input,
+#filter-container select,
+#filter-container button {
+    font-size: 1rem;
+    padding: 8px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Stil za dugme Filtriraj */
+#filter-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filter-container button:hover {
+    background-color: #45a049;
+}
+
+/* Razmaci između inputa, selekta i labela */
+#filter-container div {
+    margin-bottom: 15px;
+}
+
+/* Tablica */
 table {
     width: 90%;
     border-collapse: collapse;
     justify-content: center;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-top: 20px;
     text-align: left;
     background-color: #f9f9f9;
@@ -84,57 +133,59 @@ table + table {
     margin-top: 40px;
 }
 
+/* Struktura stranice sa filtrima i sadržajem */
 .main-part {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
 }
 
 .top-rated-movies {
-    flex: 1; 
+    flex: 1;
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-  
+
 .top-rated-movies h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
 }
-  
+
 .top-movies-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
-  
+
 .top-movie {
     background: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
-  
-.top-movie:hover {
-    transform: translateY(-5px); 
 }
-  
+
+.top-movie:hover {
+    transform: translateY(-5px);
+}
+
 .top-movie p {
     margin: 5px 0;
     font-size: 1em;
 }
-  
+
 .top-movie h3 {
     font-size: 1.3em;
     font-weight: bold;
     color: #333;
 }
 
+/* Stilovi za kartice filmova u preporučenim filmovima */
 .recommended-movies {
     flex: 1;
     position: sticky;
@@ -145,56 +196,55 @@ table + table {
 }
 
 .recommended-movies h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
-
 
 .movies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
     gap: 10px;
     padding: 10px;
-  }
-  
+}
+
 .movie-card {
-    overflow: hidden; 
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-
 }
 
 .movie-card:hover {
-    transform: translateY(-5px); 
-  }
+    transform: translateY(-5px);
+}
 
 .movie-poster {
-    width: 100%; 
-    object-fit: fill; 
+    width: 100%;
+    object-fit: fill;
 }
-  
+
 .movie-card p {
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
 }
 
+/* Stil za pie-chart */
 .pie-chart {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background: conic-gradient(
-        #3498db 0% 40%,  /* Industrija */
-        #2ecc71 40% 75%,  /* Kućanstva */
-        #f1c40f 75% 100%  /* Transport */
+        #3498db 0% 40%,
+        #2ecc71 40% 75%,
+        #f1c40f 75% 100%
     );
     margin: 0 auto;
     transition: transform 0.3s ease;
 }
 
 .pie-chart:hover {
-    transform: scale(1.1);  /* Lagano povećanje grafičkog elementa na hover */
+    transform: scale(1.1);
 }
 
 .pie-chart-container {
@@ -202,18 +252,6 @@ table + table {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-}
-
-.pie-chart {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: conic-gradient(
-        #3498db 0% 40%,  /* Industrija */
-        #2ecc71 40% 75%,  /* Kućanstva */
-        #f1c40f 75% 100%  /* Transport */
-    );
-    margin: 0 auto;
 }
 
 .pie-chart-text {
@@ -227,7 +265,6 @@ table + table {
     font-weight: bold;
 }
 
-/* Flexbox analiza sekcija */
 .analysis-flex {
     display: flex;
     justify-content: space-between;
@@ -241,54 +278,14 @@ table + table {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 30%;  /* Smanjuje širinu boxova za veće ekrane */
+    flex: 1 1 30%;
     min-width: 250px;
     max-width: 300px;
-    transition: transform 0.3s ease;  /* Animacija pri hoveru */
+    transition: transform 0.3s ease;
 }
 
 .analysis-box:hover {
-    transform: scale(1.05);  /* Lagano uvećanje pri hoveru */
-}
-
-/* Flexbox za kontakt formu */
-.form-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-input, button {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, button:focus {
-    border-color: #3498db;  /* Fokusiranje na inpute i gumb */
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-/* Footer */
-footer {
-    margin-top: 30px;
-    padding: 10px;
-    background: #222;
-    color: white;
+    transform: scale(1.05);
 }
 
 /* Responzivnost */
@@ -306,7 +303,7 @@ footer {
     .nav-menu {
         flex-direction: column;
         text-align: center;
-        margin-top: 10px;  /* Razmak u mobilnoj verziji */
+        margin-top: 10px;
     }
 
     .form-flex input, .form-flex button {
@@ -314,7 +311,16 @@ footer {
     }
 
     .analysis-box {
-        flex: 1 1 100%;  /* Boxovi u analizi zauzimaju cijelu širinu na mobitelima */
+        flex: 1 1 100%;
         max-width: 100%;
     }
+}
+
+#filters {
+    margin: 20px auto 0; 
+}
+
+#primjeni-filtere {
+    margin: 5px auto 0; 
+
 }

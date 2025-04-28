@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
 
-// Poslužuje statičke datoteke (HTML, CSS, slike) iz mape 'public'
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html'); // Poslužuje početnu stranicu
+    res.sendFile(__dirname + '/public/index.html'); 
 });
 
 const PORT = process.env.PORT || 3000;
